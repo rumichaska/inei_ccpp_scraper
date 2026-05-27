@@ -32,6 +32,7 @@ El proyecto tiene la siguiente estructura:
 │   ├── logs/
 │   ├── processed/
 │   └── raw/
+│       └── ccpp_data.csv # Información de centros poblados
 ├── inei_ccpp.py
 ├── inei_ccpp_summary.py
 ├── pyproject.toml
@@ -56,3 +57,86 @@ El código `./inei_ccpp_summary.py` se encarga de resumir los resultados de la r
 * CCPP sin consulta: se refiere a los centros poblados que no resultaron en una consulta exitosa.
 
 En caso se obtuvieran centro poblados sin consulta exitosa (CCPP sin consulta), es necesario volver a ejecutar el código para tratar de recabar esta información.
+
+## Entradas y Salidas
+
+La base de datos `ccpp_data.csv` se utiliza de insumo para para ubicar todos los centros poblados sujetos a recopilación de información. Esta base de datos cuenta con los siguientes campos:
+
+* `idccpp`: Código único del centro poblado.
+* `nombccpp`: Nombre del centro poblado.
+* `codccpp`: Código del centro poblado.
+* `nomdist`: Nombre del distrito.
+* `nomprov`: Nombre de la provincia.
+* `nomdep`: Nombre del deparatmento.
+* `ubigeo`: Código ubigeo.
+* `area_censa`: Área censal (de acuerdo al Censo Nacional 2017)
+* `lon`: Coordenada geográfica longitud.
+* `lat`: Coordenada geográfica latitud.
+
+Las bases de datos resultantes del proceso de recopilación mediante *web scraping* cuenta con las siguientes variables:
+
+* `DEPARTAMENTO`
+* `PROVINCIA`
+* `DISTRITO`
+* `CENTRO POBLADO`
+* `CATEGORIA`
+* `CODIGO DE UBIGEO Y CENTRO POBLADO`
+* `LONGITUD`
+* `LATITUD`
+* `ALTITUD`
+* `POBLACION`
+* `VIVIENDA`
+* `AGUA POR RED PUBLICA`
+* `ENERGIA ELECTRICA EN LA VIVIENDA`
+* `DESAGUE POR RED PUBLICA`
+* `VIA DE MAYOR USO`
+* `TRANSPORTE DE MAYOR USO`
+* `FRECUENCIA`
+* `TIEMPO EN MINUTOS HACIA LA CAPITAL DEL DISTRITO`
+* `DISTANCIA DEL CENTRO POBLADO HACIA LA CAPITAL DEL DISTRITO(KM)`
+* `DISTANCIA DEL CENTRO POBLADO HACIA EL CENTRO POBLADO EDUCATIVO `
+* `DISTANCIA DEL CENTRO POBLADO HACIA EL CENTRO DE SALUD MAS CERCA`
+* `ALUMBRADO PUBLICO`
+* `TELEFONO PUBLICO`
+* `LOCAL COMUNAL`
+* `HOSTAL / ALBERGUE`
+* `ESTACION DE RADIO`
+* `INSTITUCION EDUCATIVA PRIMARIA`
+* `INSTITUCION EDUCATIVA SECUNDARIA`
+* `ESTABLECIMIENTO/ PUESTO DE SALUD`
+* `PUESTO POLICIAL`
+* `OFICINA DE CORREO`
+* `CABINA DE INTERNET`
+* `HELADAS /NEVADAS`
+* `GRANIZADAS`
+* `LLUVIAS`
+* `SEQUIAS`
+* `VENDAVALES (VIENTOS FUERTES)`
+* `INUNDACIONES`
+* `DERRUMBES/DESLIZAMIENTOS`
+* `HUAYCOS / ALUDES/ALUVIONES`
+* `DESERTIFICACIONES`
+* `SALINIZACION DE LOS SUELOS`
+* `ACTIVIDAD VOLCANICA`
+* `SISMOS`
+* `TSUNAMI U OLEADAS ANOMALOS`
+* `OTROS FENOMENOS NAT.`
+* `DERRAME DE SUSTANCIAS O DESECHOS TOXICOS`
+* `FUGAS DE GASES TOXICOS`
+* `EXPLOSIONES`
+* `INCENDIOS Y QUEMAS`
+* `CRIANZA DE ANIMALES EN ZONAS URBANAS`
+* `INCREMENTO DE ZONAS INDUS. NO AUTORIZADAS`
+* `ZONAS AEREOPORTUARIAS`
+* `RELLENOS SANITARIOS`
+* `SUBVERSIONES Y/O CONFLICTOS SOCIALES`
+* `OTROS PELIGROS`
+* `UN LECHO DE RIO O QUEBRADA`
+* `UN CUARTEL MILITAR O POLICIAL`
+* `UNA VIA FERREA`
+* `LA EROSION DE RIOS EN LADERAS DE CERROS`
+* `BARRANCOS O PRECIPICIOS`
+* `OTROS`
+* `PISTAS Y VEREDAS EN LA MAYORI DE SUS CALLES Y/O MANZANAS`
+* `CANALES DE DRENAJE EN LAS CALLES PARA LA EVACUACION DE LAS AGUA`
+* `IDIOMA O LENGUA QUE SE HABLA CON MAYOR FRECUENCIA`
