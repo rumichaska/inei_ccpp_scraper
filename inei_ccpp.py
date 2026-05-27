@@ -54,12 +54,9 @@ list_cod_ubigeo = df_ccpp.sort_values(by="ubigeo")["ubigeo"].unique().tolist()
 
 # FILTERS ----
 
-cod_depa = "05"
+cod_depa = "10"
 cod_dist = [cod for cod in list_cod_ubigeo if cod.startswith(cod_depa)]
 n_dist = len(cod_dist)
-
-# Chequeo
-# len([ccpp for ccpp in df_ccpp["idccpp"] if ccpp.startswith(cod_depa)])
 
 # REQUEST ----
 
