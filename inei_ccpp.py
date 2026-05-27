@@ -54,7 +54,7 @@ list_cod_ubigeo = df_ccpp.sort_values(by="ubigeo")["ubigeo"].unique().tolist()
 
 # FILTERS ----
 
-cod_depa = "10"
+cod_depa = "25"
 cod_dist = [cod for cod in list_cod_ubigeo if cod.startswith(cod_depa)]
 n_dist = len(cod_dist)
 
