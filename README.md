@@ -1,6 +1,7 @@
 # PROYECTO PARA OBTENER INFORMACIÓN POR CENTRO POBLADO
 
-> [!IMPORTANT] Todavía no se contempla el código para juntar todas las bases de datos parciales (`./data/processed/ubigeo_{codigo_ubigeo}_data.csv`) y unirlas (*join*) con `./data/raw/ccpp_data.csv`.
+> [!IMPORTANT]
+> Todavía no se contempla el código para juntar todas las bases de datos parciales (`./data/processed/ubigeo_{codigo_ubigeo}_data.csv`) y unirlas (*join*) con `./data/raw/ccpp_data.csv`.
 
 Este proyecto recopila información de los centros poblados del Perú mediente el uso *web scraping* y `Python`.
 
@@ -9,14 +10,16 @@ Este proyecto recopila información de los centros poblados del Perú mediente e
 El presente proyecto fue desarrollado utilizando `python 3.10`. Para replicar el entorno de desarrollo puede utilizar los siguientes comandos:
 
 Utilizando `uv`:
-> [!NOTE] Puede instalar `uv` siguiendo la [documentación oficial](https://docs.astral.sh/uv/getting-started/installation/)
+> [!NOTE]
+> Puede instalar `uv` siguiendo la [documentación oficial](https://docs.astral.sh/uv/getting-started/installation/)
 
 ```sh
 uv sync
 ```
 
 Utilizando `venv` y `pip` (Linux):
-> [!NOTE] Para SO Windows, puede seguir los pasos descritos en [el siguiente link](https://docs.python.org/3/library/venv.html)
+> [!NOTE]
+> Para SO Windows, puede seguir los pasos descritos en [el siguiente link](https://docs.python.org/3/library/venv.html)
 
 ```sh
 python -m venv ./.venv
