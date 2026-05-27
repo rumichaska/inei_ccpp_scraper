@@ -65,7 +65,7 @@ En caso se obtuvieran centro poblados sin consulta exitosa (CCPP sin consulta), 
 
 ## Entradas y Salidas
 
-La base de datos `ccpp_data.csv` se utiliza de insumo para para ubicar todos los centros poblados sujetos a recopilación de información. Esta base de datos cuenta con los siguientes campos:
+La base de datos `ccpp_data.csv` se utiliza como insumo para determinar todos los centros poblados sujetos a recopilación de información. Esta base de datos cuenta con los siguientes campos:
 
 * `idccpp`: Código único del centro poblado.
 * `nombccpp`: Nombre del centro poblado.
