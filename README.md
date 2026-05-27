@@ -1,5 +1,7 @@
 # PROYECTO PARA OBTENER INFORMACIÓN POR CENTRO POBLADO
 
+[!IMPORTANT] Todavía no se contempla el código para juntar todas las bases de datos parciales (`./data/processed/ubigeo_{codigo_ubigeo}_data.csv`) y unirlas (*join*) con `./data/raw/ccpp_data.csv`.
+
 Este proyecto recopila información de los centros poblados del Perú mediente el uso *web scraping* y `Python`.
 
 ## Entorno de desarrollo
@@ -7,14 +9,14 @@ Este proyecto recopila información de los centros poblados del Perú mediente e
 El presente proyecto fue desarrollado utilizando `python 3.10`. Para replicar el entorno de desarrollo puede utilizar los siguientes comandos:
 
 Utilizando `uv`:
-> [!INFO] Puede instalar `uv` siguiendo la [documentación oficial](https://docs.astral.sh/uv/getting-started/installation/)
+[!INFO] Puede instalar `uv` siguiendo la [documentación oficial](https://docs.astral.sh/uv/getting-started/installation/)
 
 ```sh
 uv sync
 ```
 
 Utilizando `venv` y `pip` (Linux):
-> [!INFO] Para SO Windows, puede seguir los pasos descritos en [el siguiente link](https://docs.python.org/3/library/venv.html)
+[!INFO] Para SO Windows, puede seguir los pasos descritos en [el siguiente link](https://docs.python.org/3/library/venv.html)
 
 ```sh
 python -m venv ./.venv
@@ -48,7 +50,7 @@ El código `./inei_ccpp.py` se encarga de recopilar la información a nivel de d
 * `nor`: Información del código de centro poblado que resultó en consulta exitosa y sin registros.
 * `err`: Información del código de centro poblado que no resultó en consulta exitosa.
 
-Estos *logs* se guardan en la carpeta `./data/processed/` con el siguiente patrón `ubigeo_{codigo_del_ubigeo}_{tipo_de_log}.txt`, por ejemplo, `ubigeo_010101_log.txt` corresponde a la lista de centros poblados del ubigeo 010101 con consulta exitosa.
+Estos *logs* se guardan en la carpeta `./data/processed/` con el siguiente patrón `ubigeo_{codigo_ubigeo}_{tipo_log}.txt`, por ejemplo, `ubigeo_010101_log.txt` corresponde a la lista de centros poblados del ubigeo 010101 con consulta exitosa.
 
 El código `./inei_ccpp_summary.py` se encarga de resumir los resultados de la recopilación de datos, la información se resumen en 3 tipos de salidas:
 
