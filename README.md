@@ -41,11 +41,13 @@ El proyecto tiene la siguiente estructura:
 └── README.md
 ```
 
-El código `./inei_ccpp.py` se encarga de recopilar la información a nivel de departamento por lo que es necesario modificar la variable `cod_depa` en cada ejecución. Este paso se puede obviar mediante un *for loop* que itere sobre los 25 departamentos (01-25). El código, además, cuenta con *logs* de avance para recuperar la consulta en caso se dieran problemas de conexión, esto implica que la siguiente ejecución del código solo realizará la consulta para aquellos centros poblados que aun no han sido registrados o tuvieron algun problema (*status code 400*). Los *logs* se dividen en 3 grupos:
+El código `./inei_ccpp.py` se encarga de recopilar la información a nivel de departamento por lo que es necesario modificar la variable `cod_depa` en cada ejecución. Este paso se puede obviar mediante un *for loop* que itere sobre los 25 departamentos (01-25). El código, además, cuenta con *logs* de avance para recuperar la consulta en caso se dieran problemas de conexión, esto implica que la siguiente ejecución del código solo realizará la consulta para aquellos centros poblados que aun no han sido registrados o tuvieron algun problema (*status code 400*). Los *logs* se dividen en 3 tipos:
 
-* log:
-* nor:
-* err:
+* `log`: Información del código de centro poblado que resultó en consulta exitosa y con registros.
+* `nor`: Información del código de centro poblado que resultó en consulta exitosa y sin registros.
+* `err`: Información del código de centro poblado que no resultó en consulta exitosa.
+
+Estos *logs* se guardan en la carpeta `./data/processed/` con el siguiente patrón `ubigeo_{codigo_del_ubigeo}_{tipo_de_log}.txt`, por ejemplo, `ubigeo_010101_log.txt` corresponde a la lista de centros poblados del ubigeo 010101 con consulta exitosa.
 
 El código `./inei_ccpp_summary.py` se encarga de resumir los resultados de la recopilación de datos, la información se resumen en 3 tipos de salidas:
 
